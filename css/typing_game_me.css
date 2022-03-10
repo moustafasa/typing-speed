@@ -1,0 +1,248 @@
+body {
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.game {
+  height: 100vh;
+  background-color: #ddd;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.game header {
+  background-color: #25a19b;
+  padding: 20px;
+  color: white;
+  margin-bottom: 20px;
+  box-shadow: 0 -1px 17px 7px #2c24247d, 0 0px 13px 15px #fbf8f8;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.game .container {
+  width: 1190px;
+  margin: 70px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.game .container aside {
+  background-color: #00b3dd40;
+  padding: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: black;
+  border: 2px solid #00c3cc;
+  border-radius: 5px;
+}
+.game .container aside .game-info {
+  text-transform: capitalize;
+  padding: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  border: 2px solid #00c3cc;
+}
+.game .container aside .game-info .game-lvl-span {
+  color: #9c27b0;
+  cursor: pointer;
+}
+.game .container aside .game-info .game-lvl-span::before,
+.game .container aside .game-info .seconds::before {
+  content: "[ ";
+}
+.game .container aside .game-info .game-lvl-span::after,
+.game .container aside .game-info .seconds::after {
+  content: " ]";
+}
+.game .container aside .game-info.choose .game-lvl-select {
+  display: inline-block;
+}
+.game .container aside .game-info.choose .game-lvl-span {
+  display: none;
+}
+.game .container aside .game-info .game-lvl-select {
+  display: none;
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 1em;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.game .container aside .game-info .seconds {
+  color: #9c27b0;
+}
+.game .container aside .footer p {
+  text-transform: capitalize;
+  padding-left: 15px;
+  margin-bottom: 0;
+}
+.game .container aside .footer p:last-of-type {
+  margin-bottom: initial;
+}
+.game .container aside .footer p .seconds-left,
+.game .container aside .footer p .plr-score,
+.game .container aside .footer p .total-score {
+  display: inline-block;
+  padding: 0 5px;
+  color: #9c27b0;
+  font-weight: bold;
+}
+.game .container .game-body {
+  width: 700px;
+  background-color: #25a19b;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid #080808;
+  position: relative;
+}
+.game .container .game-body .playground-area .word {
+  background-color: #ddd;
+  padding: 10px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #009688;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: 70px;
+  font-weight: bold;
+}
+.game .container .game-body .playground-area .word:empty {
+  display: none;
+}
+.game .container .game-body .playground-area .start-btn {
+  display: block;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: #f74813;
+  border-radius: 5px;
+  box-shadow: 0px 1px 6px 2px #00000061;
+  color: #f2f2f2;
+  transition: 0.3s;
+  font-size: 30px;
+  font-weight: bold;
+}
+.game .container .game-body .playground-area .start-btn:hover {
+  background-color: #ff6b3d;
+  box-shadow: 0px 1px 6px 2px #0000008c;
+  color: white;
+}
+.game .container .game-body .playground-area input {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px solid black;
+  caret-color: #009688;
+  color: #009688;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+}
+.game .container .game-body .word-suggestions {
+  background-color: #eee;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+.game .container .game-body .word-suggestions p {
+  text-transform: capitalize;
+  color: #009688;
+  font-weight: bold;
+  font-size: 20px;
+}
+.game .container .game-body .word-suggestions div {
+  background-color: #9c27b0;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  box-shadow: 0 0px 5px 0px #0000008a inset, 0 0px 5px 0px #0000008a;
+  margin: 5px 5px;
+}
+.game .container .game-body .message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 30px;
+  padding: 10px;
+}
+.game .container .game-body .message div {
+  background-color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 20px;
+  padding: 10px;
+  font-size: 30px;
+  text-transform: capitalize;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 0px 20px 0px black;
+  transition: 0.5s;
+}
+.game .container .game-body .message div .score {
+  color: #9c27b0;
+}
+.game .container .game-body .message .good {
+  color: #009688;
+  box-shadow: 0 0px 20px 392px #00bcd4;
+}
+.game .container .game-body .message .bad {
+  color: #e91e63;
+  box-shadow: 0 0px 20px 392px #e91e63;
+}
+.game .container .game-body .message .again-btn {
+  display: block;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  padding: 7px 10px;
+  border: none;
+  background-color: #9c27b0;
+  color: white;
+  border-radius: 5px;
+  text-transform: capitalize;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #f74813;
+  border-radius: 5px;
+  box-shadow: 0px 1px 6px 2px #00000061;
+  color: #f2f2f2;
+  transition: 0.5s;
+}
+.game .container .game-body .message .again-btn:hover {
+  background-color: #ff6b3d;
+  box-shadow: 0px 1px 6px 2px #0000008c;
+  color: white;
+}
+/*# sourceMappingURL=typing_game_me.css.map */

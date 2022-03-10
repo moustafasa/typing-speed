@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>typing game elzero</title>
+    <link rel="stylesheet" href="css/typing_game_me.css" />
+  </head>
+  <body>
+    <div class="game">
+      <header>typing speed test game</header>
+      <div class="container">
+        <aside>
+          <div class="game-info">
+            you are playing on
+            <span class="game-lvl-span"></span>
+            <select name="lvl" class="game-lvl-select">
+              <option value="easy">easy</option>
+              <option value="normal">normal</option>
+              <option value="difficult">difficult</option>
+            </select>
+            &amp; you have
+            <span class="seconds"></span>
+            seconds
+          </div>
+          <div class="footer">
+            <p class="time-left">
+              time Left: <span class="seconds-left"></span> seconds
+            </p>
+            <p class="score">
+              score: <span class="plr-score"></span> from
+              <span class="total-score"></span>
+            </p>
+            <p class="most-score">
+              most score: <span class="plr-score"></span> from
+              <span class="total-score"></span>
+            </p>
+          </div>
+        </aside>
+        <div class="game-body">
+          <div class="playground-area">
+            <div class="word"></div>
+            <button class="start-btn">start</button>
+            <input type="text" />
+          </div>
+          <div class="word-suggestions">
+            <p>words will show here</p>
+          </div>
+
+          <div class="message hidden">
+            <div class=""></div>
+            <a href="?" class="again-btn">play again</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/typing_game_me.js"></script>
+  </body>
+</html>
